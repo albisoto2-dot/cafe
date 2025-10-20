@@ -1,20 +1,22 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAXFP - Formación Profesional de Excelencia</title>
+    <title>albisoto2-dot | Desarrollador & Creador</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* ==================================== */
-        /* CSS: Estilos de la Página */
+        /* CSS: Estilos de la Página (Tema Oscuro) */
         /* ==================================== */
         
         :root {
-            --color-principal: #004d99; /* Azul universitario */
-            --color-secundario: #f4f4f4; /* Gris claro para fondo */
-            --color-texto: #333;
-            --color-acento: #ff9900; /* Naranja para énfasis */
+            --color-fondo: #1a1a1a;     /* Fondo muy oscuro */
+            --color-texto: #ffffff;     /* Texto blanco */
+            --color-principal: #00bcd4; /* Azul/Cian para acentos */
+            --color-secundario: #f1f1f1;
         }
 
         /* Estilo base y reseteo */
@@ -26,115 +28,87 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--color-secundario);
+            background-color: var(--color-fondo);
             color: var(--color-texto);
+            display: flex; /* Usamos flexbox para centrar todo */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupar toda la altura de la ventana */
             line-height: 1.6;
-            padding: 20px;
         }
 
-        /* Contenedor principal para centrar el contenido */
+        /* Contenedor principal centrado */
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Más estrecho que el café, para un estilo más personal */
+            width: 90%;
+            text-align: center;
+            padding: 40px 20px;
+            /* La página original no tiene bordes, es totalmente inmersiva */
         }
 
-        /* Estilos de la cabecera */
+        /* Estilos del encabezado principal (Tu Nombre) */
         header {
-            text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 2px solid var(--color-principal);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         header h1 {
             color: var(--color-principal);
-            font-size: 2.8em;
+            font-size: 3em;
             margin-bottom: 5px;
+            font-weight: 700;
         }
 
         header p {
-            color: var(--color-texto);
+            color: var(--color-secundario);
             font-size: 1.2em;
+            margin-bottom: 25px;
         }
-        
-        /* Estilos de sección */
-        section {
+
+        /* Sección de enlaces y proyectos */
+        .links-section {
             padding: 20px 0;
         }
 
-        section h2 {
-            color: var(--color-acento);
+        /* Estilo de los iconos/enlaces de redes sociales */
+        .social-links a {
+            color: var(--color-secundario);
             font-size: 2em;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        
-        section h3 {
-            color: var(--color-principal);
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        /* Estilos de lista (para el menú/oferta) */
-        ul {
-            list-style: none;
-            padding-left: 0;
+            margin: 0 15px;
+            transition: color 0.3s ease;
         }
 
-        ul li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .item-description {
-            flex-grow: 1;
-            padding-right: 15px;
-        }
-
-        .item-price {
-            font-weight: bold;
+        .social-links a:hover {
             color: var(--color-principal);
         }
 
-        /* Estilos de pie de página y enlaces */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        a {
+        /* Estilo de los botones de proyectos */
+        .project-link {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            background-color: transparent;
+            border: 2px solid var(--color-principal);
             color: var(--color-principal);
             text-decoration: none;
+            text-transform: uppercase;
             font-weight: bold;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Responsive design para móviles */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 15px;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            section h2 {
-                font-size: 1.5em;
-            }
+        .project-link:hover {
+            background-color: var(--color-principal);
+            color: var(--color-fondo); /* El texto se oscurece al pasar el ratón */
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333; /* Línea separadora sutil */
+            font-size: 0.8em;
+            color: #999;
         }
         
     </style>
@@ -143,78 +117,39 @@
     <div class="container">
         
         <header>
-            <h1>UAXFP</h1>
-            <p>Formación Profesional de Excelencia. Impulsando tu futuro.</p>
+            <h1>Alvaro</h1>
+            <p>Desarrollador de software y entusiasta del diseño.</p>
         </header>
 
-        <main>
-            <section id="oferta">
-                <h2>Nuestra Misión</h2>
-                <p>Ofrecer una educación práctica y de alta calidad en entornos reales de trabajo. Conviértete en el profesional que el mercado demanda.</p>
-                
-                <h3>Áreas de Formación Destacadas</h3>
-                <ul>
-                    <li>
-                        <span class="item-description">🖥️ Desarrollo de Aplicaciones Multiplataforma</span>
-                        <span class="item-price">Ciclo Superior</span>
-                    </li>
-                    <li>
-                        <span class="item-description">⚙️ Mantenimiento Electrónico y Automatización</span>
-                        <span class="item-price">Ciclo Superior</span>
-                    </li>
-                    <li>
-                        <span class="item-description">💼 Administración y Finanzas</span>
-                        <span class="item-price">Ciclo Superior</span>
-                    </li>
-                    <li>
-                        <span class="item-description">💡 Marketing y Publicidad Digital</span>
-                        <span class="item-price">Ciclo Medio</span>
-                    </li>
-                </ul>
-            </section>
+        <main class="links-section">
             
-            <hr> <section id="por-que">
-                <h2>¿Por qué elegir UAXFP?</h2>
-                <ul>
-                    <li>✅ **Metodología Práctica:** 80% de horas en talleres y laboratorios.</li>
-                    <li>🧑‍🏫 **Profesores Expertos:** Profesionales en activo que te guían.</li>
-                    <li>🌍 **Bolsa de Empleo:** Convenios con más de 100 empresas líderes.</li>
-                    <li>💻 **Campus Digital:** Acceso 24/7 a materiales y clases de apoyo.</li>
-                </ul>
-            </section>
+            <div class="social-links">
+                <a href="URL_DE_TU_GITHUB" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="URL_DE_TU_LINKEDIN" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="URL_DE_TU_TWITTER" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:TU_CORREO@ejemplo.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <a href="https://albisoto2-dot.github.io/cafe/" class="project-link">
+                Ver Mi Proyecto bardoCafé
+            </a>
             
-            <hr> <section id="contacto">
-                <h2>Próximas Jornadas de Puertas Abiertas</h2>
-                <p>Ven a conocernos y resuelve todas tus dudas.</p>
-                <address>
-                    📍 Campus Central: Avenida Innovación, 45 - Madrid
-                </address>
-                <p>
-                    📅 Fecha: 15 de Noviembre - 17:00h
-                </p>
-                <p>
-                    📞 <a href="tel:+34900123456">Llámanos: 900 123 456</a> | 
-                    ✉️ <a href="mailto:admision@uaxfp.com">Escríbenos: admision@uaxfp.com</a>
-                </p>
-            </section>
+            <a href="URL_A_OTRO_PROYECTO" class="project-link">
+                Mi Portafolio Completo
+            </a>
+
         </main>
 
         <footer>
-            <p>© 2025 UAXFP. Todos los derechos reservados. | <a href="https://uaxfp.com/legal">Aviso Legal</a></p>
+            <p>"La simplicidad es la máxima sofisticación." | Hecho con HTML & CSS puro.</p>
         </footer>
     </div>
 
     <script>
-        /* ==================================== */
-        /* JAVASCRIPT: Funcionalidad mínima */
-        /* ==================================== */
-
-        // Un ejemplo de JavaScript muy simple: mostrar un mensaje en la consola al cargar la página
+        // No se requiere JavaScript para replicar esta funcionalidad estática.
+        // Se mantiene el script vacío por si quieres añadir algo después.
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('UAXFP: La página se ha cargado completamente y está lista.');
-            
-            // Si tuvieras un botón para mostrar un pop-up, el código iría aquí.
-            // Por ahora, la página es completamente estática, como el bardo-cafe original.
+            console.log('Página de portafolio personal cargada.');
         });
     </script>
 </body>
